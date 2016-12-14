@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="galleria/galleria.classic.css">
+        <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Packaged Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+        <script type="application/javascript" src="js/registro.js"></script>
+        <script type="application/javascript" src="JS/Mostrardatos.js"></script>
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+
+        <script type="application/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="galleria/galleria-1.3.6.min.js"></script>
+        <script type="application/javascript" src="galleria/galleria.classic.min.js"></script>
+        <script type="application/javascript" src="galleria/galleria-startup.js"></script>
+        <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script type="application/javascript" src="google_maps/google_maps.js"></script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="uwrap views">
+            <div class="upage vertical-col left view-main view color" id="mainpage">
+                <div class="pages">
+                    <div class="page">
+                        <div class="page-content upage-content content-area" id="maincontent">
+                            <div class="widget uib_w_1 scale-image d-margins" data-uib="media/img" data-ver="0">
+                                <figure class="figure-align">
+                                    <img src="images/imagenes.jpg">
+
+                                    <figcaption data-position="bottom"></figcaption>
+                                </figure>
+                            </div>
+                            <div class="table-thing widget uib_w_2 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+                                <label class="narrow-control"></label>
+                                <aling center="">
+                                    <textarea rows="1" class="wide-control form-control" wrap="hard" name="correo" placeholder="  Correo Electrónico"></textarea>
+                                </aling>
+                            </div>
+                            <div class="table-thing widget uib_w_3 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+                                <label class="narrow-control"></label>
+                                <textarea rows="1" class="wide-control form-control" wrap="hard" placeholder="      Contraseña" name="contraseña"></textarea>
+                            </div>
+                            <button class="btn widget uib_w_4 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="sesion">Iniciar sesión</button>
+                            <label class="checkbox checkbox-padding-left widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+                                <input type="checkbox" name="contra">Recordar Contraseña</label>
+                            <button class="btn widget uib_w_6 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="regis">Registrate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upage vertical-col left hidden color" id="modregistro">
+                <div class="widget uib_w_7 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="table-thing widget uib_w_8 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+                    <label class="narrow-control"></label>
+                    <textarea rows="1" class="wide-control form-control" wrap="soft" placeholder="Nombre" name="regnom" id="txtnombre"></textarea>
+                </div>
+                <div class="table-thing widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+                    <label class="narrow-control"></label>
+                    <textarea rows="1" class="wide-control form-control" wrap="soft" placeholder="Apellidos" name="apreg" id="txtapellidos"></textarea>
+                </div>
+                <div class="table-thing widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+                    <label class="narrow-control"></label>
+                    <textarea rows="1" class="wide-control form-control" wrap="soft" placeholder="Correo Electrónico" name="regcorr" id="txtcorreo"></textarea>
+                </div>
+                <select name="Municipio">
+                    <option>Municipios</option>
+                    <option>Zapopan</option>
+                </select>
+                <div class="table-thing widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+                    <label class="narrow-control"></label>
+                    <textarea rows="1" class="wide-control form-control" wrap="soft" placeholder="Contraseña" name="regcont" id="txtcontrasena"></textarea>
+                </div>
+
+                <button class="btn widget uib_w_13 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="regis23">Registrate</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="Inicio">
+                <div class="widget uib_w_14 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <button class="btn widget uib_w_15 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="Ineta">Etapas de Vida</button>
+                <button class="btn widget uib_w_16 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="InRaz">Razas</button>
+                <button class="btn widget uib_w_17 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="Inenf">Enfermedades</button>
+                <button class="btn widget uib_w_18 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="Incons">Consejos</button>
+                <button class="btn widget uib_w_19 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="InLo">Locales Recomendados</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="Etapas">
+                <div class="widget uib_w_20 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="tarea widget uib_w_21 d-margins" data-uib="media/text" data-ver="0" name="uib_w_21">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <h2 style="font-style:italic"><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong>Etapas de vida</h2>
+                    </div>
+                </div>
+                <div class="table-thing widget uib_w_22 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+                    <label class="narrow-control label-inline"></label>
+                    <textarea rows="1" class="wide-control form-control" wrap="soft" placeholder="    Cachorro (14 días a 5 semanas)" name="cachorroet"></textarea>
+                </div>
+                <div class="table-thing widget uib_w_23 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+                    <label class="narrow-control label-inline"></label>
+                    <textarea rows="1" class="wide-control form-control" wrap="soft" placeholder="    Pubertad (5 meses a 11 semanas)" name="PubertadEt"></textarea>
+                </div>
+                <div class="table-thing widget uib_w_24 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+                    <label class="narrow-control label-inline"></label>
+                    <textarea rows="1" class="wide-control form-control" wrap="soft" placeholder="    Mayor (12meses a 10 años)" name="mayoreta"></textarea>
+                </div>
+                <button class="btn widget uib_w_25 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="inieta">Inicio</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="razas">
+                <div class="widget uib_w_26 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="tarea widget uib_w_27 d-margins" data-uib="media/text" data-ver="0" name="uib_w_27">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <h1 style="font-style: italic;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Razas</strong></h1>
+                    </div>
+                </div>
+
+                <div class="uib-button-bar default-button-bar-height widget uib_w_37 d-margins" data-uib="media/button_bar" data-ver="0">
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_38 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" id="BeagleRa">
+                        <img src="images/beagle-hembra.jpg">
+                        <span class="uib-caption">Beagle</span>
+                    </a>
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_39 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="Mostar">
+                        <img src="images/chihuahua.jpg">
+                        <span class="uib-caption">Chihuahua</span>
+                    </a>
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_40 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="DalRa">
+                        <img src="images/Dálmata_02.jpg">
+                        <span class="uib-caption">Dálmata</span>
+                    </a>
+                </div>
+                <div class="uib-button-bar default-button-bar-height widget uib_w_63 d-margins" data-uib="media/button_bar" data-ver="0">
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_64 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="LabraRzrsss">
+                        <img src="images/labrador.jpg">
+                        <span class="uib-caption">Labrador</span>
+                    </a>
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_65 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="MaltesRa">
+                        <img src="images/maltes.jpg">
+                        <span class="uib-caption">Maltes</span>
+                    </a>
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_66 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="PastoAleRa">
+                        <img src="images/pastor-aleman-con-cachorros.jpg">
+                        <span class="uib-caption">Pastor Aleman</span>
+                    </a>
+                </div>
+                <button class="btn widget uib_w_42 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="Ra1sig">Siguiente</button>
+                <button class="btn widget uib_w_52 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="InicRa1">Inicio</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="razas2">
+                <div class="widget uib_w_33 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+
+                <div class="uib-button-bar default-button-bar-height widget uib_w_59 d-margins" data-uib="media/button_bar" data-ver="0">
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_60 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="PitRa">
+                        <img src="images/pitbull.jpg">
+                        <span class="uib-caption">Pit Bull</span>
+                    </a>
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_61 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="PugRa">
+                        <img src="images/pugface2.jpg">
+                        <span class="uib-caption">Pug</span>
+                    </a>
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_62 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#">
+                        <img src="images/Hembra-Rottweiler-con-cachorro.jpg">
+                        <span class="uib-caption">Rottweiler</span>
+                    </a>
+                </div>
+                <div class="uib-button-bar default-button-bar-height widget uib_w_67 d-margins" data-uib="media/button_bar" data-ver="0">
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_68 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="SchnaRaz">
+                        <img src="images/img_tipos_de_schnauzer_mini_mediano_y_gigante_20716_paso_2_600.jpg">
+                        <span class="uib-caption">Schnauzer</span>
+                    </a>
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_69 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="MezRa">
+                        <img src="images/mestizo.jpg">
+
+                        <span class="uib-caption">Mestizo</span>
+                    </a>
+                    <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_70 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="HuskyRaz">
+                        <img src="images/perros-Husky-Siberiano_opt-compressor-1.jpg">
+                        <span class="uib-caption">Husky</span>
+                    </a>
+                </div>
+                <div class="btn-group uib-bs-flex widget uib_w_48 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_51 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="AnteRaza2">Anterior</button>
+                </div>
+
+            </div>
+            <div class="upage vertical-col left hidden color" id="Enfermedades">
+                <div class="widget uib_w_71 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="tarea widget uib_w_72 d-margins" data-uib="media/text" data-ver="0" name="uib_w_72">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <h1><strong>&nbsp; Enfermedades&nbsp;</strong></h1>
+                    </div>
+                </div>
+                <button class="btn widget uib_w_73 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="MoquiEnfe">Moquillo</button>
+                <button class="btn widget uib_w_74 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="RabEnf">Rabia</button>
+                <button class="btn widget uib_w_75 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="SarEnfe">Sarna</button>
+                <button class="btn widget uib_w_76 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Vomito</button>
+                <button class="btn widget uib_w_77 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="DiarreEnfer">Diarrea</button>
+                <button class="btn widget uib_w_78 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="InicioEnferme">Inicio</button>
+                <button class="btn widget uib_w_79 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="SiguienteEnfer">siguiente</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="Enfermedades2">
+                <div class="widget uib_w_80 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <button class="btn widget uib_w_81 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="ParvoEnfer">Parvovirus</button>
+                <button class="btn widget uib_w_82 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="SacoEnfer">Sacos Anales</button>
+                <button class="btn widget uib_w_83 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="TumEnfe">Tumor Garganta</button>
+                <button class="btn widget uib_w_84 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="InflOreEnfe">Inflamación Orejas</button>
+                <button class="btn widget uib_w_85 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="AnteriEnf">Anterior</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="Consejos">
+                <div class="widget uib_w_86 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="  images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="tarea widget uib_w_87 d-margins" data-uib="media/text" data-ver="0" name="uib_w_87">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <h1>&nbsp; &nbsp; &nbsp; &nbsp;<strong>Consejos</strong></h1>
+                    </div>
+                </div>
+                <button class="btn widget uib_w_88 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="CmaCon">Cama</button>
+                <button class="btn widget uib_w_89 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="CCCONSE">Collar y Correa</button>
+                <button class="btn widget uib_w_90 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="CBCONS">Comedor y Bebedor</button>
+                <button class="btn widget uib_w_91 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="SilCon">Silbato para Perros</button>
+                <button class="btn widget uib_w_92 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="JugCon">Juguetes</button>
+                <button class="btn widget uib_w_93 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="InicioCon">Inicio</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="LocalesRecomendados">
+                <div class="widget uib_w_94 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="tarea widget uib_w_95 d-margins" data-uib="media/text" data-ver="0" name="uib_w_95">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <h1><strong>&nbsp; Locale &nbsp;&nbsp;Recomendados</strong></h1>
+                    </div>
+                </div>
+                <button class="btn widget uib_w_96 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="VeteLocal">Veterinaria</button>
+                <button class="btn widget uib_w_97 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="EstLocal">Estética Canina</button>
+                <button class="btn widget uib_w_98 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="RestLocal">Restaurantes</button>
+                <button class="btn widget uib_w_99 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Paseadores</button>
+                <button class="btn widget uib_w_100 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="HosLoca">Hospedajes</button>
+                <button class="btn widget uib_w_101 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="InicLoca">Inicio</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="Beagle">
+                <div class="widget uib_w_102 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="tarea widget uib_w_103 d-margins" data-uib="media/text" data-ver="0" name="uib_w_103">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <h1><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Beagle</strong></h1>
+                    </div>
+                </div>
+                <div class="widget uib_w_105 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/beagle-hembra.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+
+                <button class="btn widget uib_w_104 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="AntBeag">Anterior</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="Chihuahua">
+                <div class="widget uib_w_106 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="tarea widget uib_w_107 d-margins" data-uib="media/text" data-ver="0" name="uib_w_107">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <h1><strong>&nbsp; &nbsp; &nbsp; &nbsp;Chihuahua</strong></h1>
+                    </div>
+                </div>
+                <div class="widget uib_w_108 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/chihuahua.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <button class="btn widget uib_w_109 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="ChiiAnte">Anterior</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="Dalmata">
+                <div class="widget uib_w_110 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="tarea widget uib_w_111 d-margins" data-uib="media/text" data-ver="0" name="uib_w_111">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <h1><strong>Coffee &amp; Pets Deli</strong></h1>
+                    </div>
+                </div>
+                <div class="widget uib_w_112 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/cuidadocanino.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <button class="btn widget uib_w_113 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="InicioLo">Inicio</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="Veterinaria">
+                <div class="widget uib_w_114 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="tarea widget uib_w_115 d-margins" data-uib="media/text" data-ver="0" name="uib_w_115">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <h1><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Pet Movil</strong></h1>
+                    </div>
+                </div>
+                <div class="widget uib_w_116 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/logo-pet-movil.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <button class="btn widget uib_w_117 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="EstInic">Inicio</button>
+            </div>
+            <div class="upage vertical-col left hidden color" id="Veterinariasi">
+                <div class="widget uib_w_118 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/imagenes.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="tarea widget uib_w_119 d-margins" data-uib="media/text" data-ver="0" name="uib_w_119">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <h1><strong>BORZOI VETERINARIA &amp; ESTÉTICA CANINA</strong></h1>
+                    </div>
+                </div>
+                <div class="widget uib_w_120 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/descarga.jpg">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <button class="btn widget uib_w_121 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="IniEst">Inicio</button>
+            </div>
+        </div>
+        <script type="application/javascript" src="framework7/my-app.js"></script>
+    </body>
+
+</html>
